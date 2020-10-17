@@ -104,7 +104,7 @@ def write_json(data, filename):
         print("Successfully wrote data to", filename)
         f.close()
     f = open(path + filename, 'rb')
-    session = ftplib.FTP('ftp.strato.de', 'computer@sparkle-network.com', '#sparkle2020!')
+    session = CREDENTIALS # add credentials here
     session.storbinary('STOR data/{}'.format(filename), f)
     session.quit()
 
