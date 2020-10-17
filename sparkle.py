@@ -439,7 +439,7 @@ def main(_argv):
                 cv2.putText(frame, now, (50, 50), cv2.FONT_HERSHEY_SIMPLEX, .6, red, 2)
                 if FLAGS.update_server:
                     print("Update Server:", now)
-                    update_json(spots[s]["id"], taken_lots, heatmap[s], now)
+                    # update_json(spots[s]["id"], taken_lots, heatmap[s], now)
                     # update_server("daily_usage.json", len(taken_lots['lot_ids']))
                     # update_server("total_usage.json", len(unique_cars))
                     # update_server("heatmap.json", heatmap[s])
