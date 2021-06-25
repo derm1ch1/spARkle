@@ -254,8 +254,8 @@ def main(_argv):
                     #break
 
                 # crop all camera frames to same width to add them to one window
-                y = spots[3]["crop"]['y']  # todo: replace '3' with 'i' for data.json loop
-                x = spots[3]["crop"]['x']
+                y = spots[0]["crop"]['y']  # todo: replace '3' with 'i' for data.json loop
+                x = spots[0]["crop"]['x']
                 h = 600
                 w = 600
                 frame = frame[y:y + h, x:x + w]
@@ -361,7 +361,7 @@ def main(_argv):
 
                 print("\n######### new round ##############")
 
-                s = 3  # todo: add data.json-loop to loop through multiple cameras in one analysing session
+                s = 0  # todo: add data.json-loop to loop through multiple cameras in one analysing session
                 for i in range(len(lots[s])):  # loop through all lots of parking space
                     # set each parking lot to 'free' as default and change if is blocked
                     lines = green
